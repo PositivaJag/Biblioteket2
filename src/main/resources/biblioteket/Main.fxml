@@ -19,11 +19,6 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnLogout" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressLogout" prefHeight="40.0" text="Logout">
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" text="Button">
                <VBox.margin>
                   <Insets bottom="10.0" />
@@ -35,6 +30,11 @@
                </VBox.margin>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" text="Button">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressLogout" prefHeight="40.0" text="Logout" visible="false">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>

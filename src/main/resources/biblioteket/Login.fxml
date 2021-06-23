@@ -34,7 +34,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="lblLoginMessage" prefHeight="35.0" />
+            <Label fx:id="lblLoginMessage" prefHeight="35.0" text="Kalle" />
             <TextField fx:id="txtMail" promptText="Mailadress">
                <VBox.margin>
                   <Insets bottom="10.0" />
