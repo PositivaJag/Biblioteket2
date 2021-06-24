@@ -1,6 +1,6 @@
 package biblioteket;
 
-import static biblioteket.App.mainControll;
+
 import biblioteket.Database.DBConnection;
 import biblioteket.Database.DBConnection.LoginResult;
 import biblioteket.Persons.Loantagare;
@@ -98,24 +98,24 @@ public class LoginController {
 //                Class<? extends Class> FWBControll = mainControll.class.getClass();
 //                FWBControll.getMethod(setLogoutVisibility());
                 if (connection.chechIfLibrarian(mail)) {
-                    mainControll.setActiveLibrarian(new Person(mail));
+                    
                     
 ////                    for (int i = 0; i < 6; i++) {
 ////                        System.out.println(activeLibrarian.toString());
 //   
 //                    }
-                     mainControll.setPersonTyp(Person.PersonTyp.BIBLIOTEKARIE);
+                   
                     
                 } 
                 //Create loantagare
                 else {
                     String[] personDB = connection.getPersonData(mail);
-                    mainControll.setActiveUser(new Loantagare(personDB[0], personDB[1], personDB[2], personDB[3], personDB[4], personDB[5]));
+                    
 
                     for (int i = 0; i < 6; i++) {
-                        System.out.println(mainControll.getActiveUser().toString());
+                       
                     }
-                    mainControll.setPersonTyp(Person.PersonTyp.LOANTAGARE);
+                    
                 }
             } 
             return pwCheck;

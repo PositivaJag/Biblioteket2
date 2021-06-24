@@ -19,7 +19,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" text="Button">
+            <Button fx:id="btnSearch" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressSearch" prefHeight="40.0" text="Sök">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>

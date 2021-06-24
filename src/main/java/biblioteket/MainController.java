@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
@@ -28,6 +29,12 @@ public class MainController implements Initializable {
 
     @FXML
     private Button btnLogout;
+    
+    @FXML
+    private Button btnSearch;
+    
+    @FXML
+    private BorderPane borderPane;
 
     final MainController mainControll = this;
     
@@ -55,6 +62,11 @@ public class MainController implements Initializable {
     @FXML
     void pressLogout(ActionEvent event) {
 
+    }
+    
+    @FXML
+    void pressSearch(ActionEvent event) {
+        loadPage("Search.fxml");
     }
     
       private boolean Login() {
@@ -98,6 +110,22 @@ public class MainController implements Initializable {
 
     public void setActiveUser(Loantagare activeUser) {
         this.activeUser = activeUser;
+    }
+    
+     private boolean loadPage(String fxml) {
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxml));
+            borderPane.setRight(root);
+            return true;
+
+        } catch (IOException ex) {
+            System.out.println("Exception i klass MainController.java, i "
+                    + "metoden loadPage()");
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+
     }
     
     
